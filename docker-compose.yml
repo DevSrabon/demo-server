@@ -1,6 +1,6 @@
 version: "3"
 services:
   node-app:
-    image: devsrabon/demo-server-image:latest
+    image: devsrabon/demo-server:latest
     container_name: demo-server-container
     network_mode: "host"
