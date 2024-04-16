@@ -17,10 +17,10 @@ jobs:
         run: docker rm demo-server-container || true
 
       - name: Delete the old image
-        run: docker rmi ${{secrets.DOCKERHUB_USERNAME}}/demo-server-image:latest || true
+        run: docker rmi ${{secrets.DOCKERHUB_USERNAME}}/demo-server:latest || true
 
       - name: Pull the image from dockerhub
-        run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/demo-server-image:latest
+        run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/demo-server:latest
 
       - name: Run the image
         run: docker compose up -d
